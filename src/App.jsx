@@ -1,7 +1,13 @@
 import React from "react";
+import "./App.css";
+import Personaje from "./components/Personaje/Componente/Personaje";
 
-const App = () => {
-  return <div></div>;
-};
+function App() {
+  return (
+    <>
+      <Personaje />
+    </>
+  );
+}
 
 export default App;
