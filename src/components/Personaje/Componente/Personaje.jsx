@@ -15,9 +15,7 @@ function Personaje() {
         />
       </div>
       <div className={estilos.info}>
-        <h1>
-          Nuñez <br /> Jorge
-        </h1>
+        <h1>Nuñez Jorge</h1>
         <h2>Desarrollador Frontend Jr.</h2>
         <span>
           <a href="https://github.com/Jorgenunnez" target="_black">
@@ -30,13 +28,13 @@ function Personaje() {
             <img src={linkedin} alt="Icono de Linkedin" />
           </a>
         </span>
-        <p>
+        <p className={estilos.descripcion}>
           Soy una persona autodidacta , estoy comprometido a seguir creciendo
           como desarrollador y afrontar desafios que pongan a prueba constante
           mis conocimientos
         </p>
         <a href={CV} download>
-          <button className="hover">CV</button>
+          <button className="hover">Descargar CV</button>
         </a>
       </div>
     </section>
