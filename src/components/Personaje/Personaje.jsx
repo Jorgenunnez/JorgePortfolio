@@ -1,8 +1,8 @@
 import estilos from "./PersonajeStyle.module.css";
-import pjimg from "../../../assets/icono.svg";
-import github from "../../../assets/github.svg";
-import linkedin from "../../../assets/linkedin.svg";
-import CV from "../../../assets/Curriculum Jorge Nuñez.pdf";
+import pjimg from "../../assets/icono.svg";
+import github from "../../assets/github.svg";
+import linkedin from "../../assets/linkedin.svg";
+import CV from "../../assets/Curriculum Jorge Nuñez.pdf";
 
 function Personaje() {
   return (

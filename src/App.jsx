@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
-import Personaje from "./components/Personaje/Componente/Personaje";
+import Proyectos from "./components/Proyectos/Proyectos";
+import Personaje from "./components/Personaje/Personaje";
 
 function App() {
   return (
     <>
       <Personaje />
+      <Proyectos />
     </>
   );
 }
