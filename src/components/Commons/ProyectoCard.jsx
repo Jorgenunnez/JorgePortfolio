@@ -1,5 +1,3 @@
-import React from "react";
-
 function ProyectoCard({ src, link, h3, p }) {
   return (
     <a href={link} target="_blank">
