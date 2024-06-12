@@ -18,7 +18,7 @@
     align-self: center;
     flex-wrap: wrap;
     row-gap: 40px;
-    max-width: 26ch;
+    max-width: 50ch;
   }
 
   hr {
@@ -27,5 +27,19 @@
     border: none;
     background-color: var(--text-color);
     margin: 30px auto;
+  }
+}
+
+@media (width >=800px) {
+  .habilidadeslista {
+    max-width: fit-content;
+    gap: 30px;
+    p {
+      font-size: 20px;
+    }
+  }
+
+  hr {
+    width: 300px;
   }
 }
