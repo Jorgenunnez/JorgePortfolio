@@ -1,10 +1,31 @@
+import React, { useRef } from "react";
 import estilos from "./ContactoStyle.module.css";
+import emailjs from "@emailjs/browser";
 
 function Contacto() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_xx3vv7c", "template_qt83r5e", form.current, {
+        publicKey: "mC9zaWZgDKbNvC2ej",
+      })
+      .then(
+        () => {
+          alert("SUCCESS!");
+        },
+        (error) => {
+          alert("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <section id="contacto" className={estilos.container}>
       <h1 className="sectionTitle">Contacto</h1>
-      <form action="">
+      <form action="" ref={form} onSubmit={sendEmail}>
         <div className="formGroup">
           <label htmlFor="name" hidden>
             Nombre
