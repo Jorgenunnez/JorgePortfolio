@@ -1,9 +1,22 @@
 import React, { useRef } from "react";
 import estilos from "./ContactoStyle.module.css";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 function Contacto() {
   const form = useRef();
+  // const FuncionalertSucess = () => {
+  //  toast("Su correo fue enviado con exito", {
+  //    icon: "✅",
+  //    style: {
+  //      borderRadius: "10px",
+  //      background: "#222",
+  //      color: "#fff",
+  //      fontsize: "100px",
+  //      fontWeight: "bold",
+  //    },
+  //  });
+  // };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,10 +27,28 @@ function Contacto() {
       })
       .then(
         () => {
-          alert("SUCCESS!");
+          toast("Su correo fue enviado Satisfactoriamente", {
+            icon: "✅",
+            style: {
+              borderRadius: "10px",
+              background: "#222",
+              color: "#fff",
+              fontsize: "100px",
+              fontWeight: "bold",
+            },
+          });
         },
         (error) => {
-          alert("FAILED...", error.text);
+          toast("Su correo no pudo ser enviado", {
+            icon: "❌",
+            style: {
+              borderRadius: "10px",
+              background: "#222",
+              color: "#fff",
+              fontsize: "100px",
+              fontWeight: "bold",
+            },
+          });
         }
       );
   };
@@ -63,6 +94,7 @@ function Contacto() {
           />
         </div>
         <input className="hover btn" type="submit" value="Enviar" />
+        <Toaster position="top-right" reverseOrder={false} />
       </form>
     </section>
   );
